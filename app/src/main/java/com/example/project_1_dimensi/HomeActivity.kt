@@ -6,6 +6,11 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.net.toUri
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
+
 
 private val appcompat: Any = TODO()
 
@@ -26,3 +31,14 @@ class HomeActivity : AppCompatActivity() {
 }
 
 annotation class setContentView(val value: Int)
+
+class HomeActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_home)
+        // Load Fragment secara dinamis
+        val fragmentManager: FragmentManager = supportFragmentManager
+        val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+        val dashboardFragment = DashboardFragment()
+        fragmentTransaction.replace(R.id.fragment_container, dashboardFragment)
+        fragmentTransaction.commit()

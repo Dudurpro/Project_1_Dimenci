@@ -2,22 +2,30 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="vertical"
     android:padding="27dp">
 
-<TextView
-    android:id="@+id/tv_welcome"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Selamat Datang!"
-    android:textSize="90sp"/>
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selamat Datang!"
+        android:textSize="90sp" />
 
-<Button
-    android:id="@+id/btn_web"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Buka Situs AMIKOM"
-    android:textSize="50dp"
-    android:layout_marginTop="24dp"/>
+    <Button
+        android:id="@+id/btn_web"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Buka Situs AMIKOM"
+        android:textSize="50dp" />
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".HomeActivity">
+    </FrameLayout>
 </LinearLayout>
